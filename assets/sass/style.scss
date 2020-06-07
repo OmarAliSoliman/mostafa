@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo&display=swap');
+
+$mainColor: #155D74;
+
+body{
+  font-family: 'Exo', sans-serif;
+}
+
+// start nav
+.nav{
+  position: absolute;
+  z-index: 2;
+  right: 10px;
+  top: 10px;
+  ul{
+    li{
+      display: inline;
+      margin-left: 25px;
+      a{
+        color: #000;
+        text-decoration: none;
+      }
+    }
+    .active{
+      position: relative;
+      &:after{
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 3px;
+        bottom: -5px;
+        right: 0;
+        background-color: $mainColor;
+      }
+    }
+  }
+}
+
+
+// start home sectopn
+.home-section{
+  background-image: url('../images/bg-masthead.jpg');
+  background-size: cover;
+  background-position: center;
+  h5{
+    font-size: 40px;
+    text-transform: uppercase;
+  }
+  .btn{
+    color: #fff;
+    text-transform: uppercase;
+    width: 15%;
+    padding: 5px;
+    transition: .5s;
+  }
+  .btn-hire{
+    background-color: $mainColor;
+    border: 2px solid $mainColor;
+    &:hover{
+      color: $mainColor;
+      background-color: #fff;
+    }
+  }
+  .btn-project{
+    color: $mainColor;
+    background-color: #fff;
+    border: 2px solid #fff;
+    &:hover{
+      background-color: transparent;
+      color: $mainColor;
+      border: 2px solid $mainColor;
+    }
+  }
+}
+
+
+@media(max-width: 800px){
+  .home-section{
+    .btn{
+      width: 75%;
+      margin-top: 10px;
+    }
+  }
+}
