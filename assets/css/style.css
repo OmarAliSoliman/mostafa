@@ -1,17 +1,40 @@
 @import url("https://fonts.googleapis.com/css2?family=Exo&display=swap");
 body {
-  font-family: 'Exo', sans-serif; }
+  font-family: "Exo", sans-serif;
+  background-color: #000; }
+
+html {
+  scroll-behavior: smooth; }
+
+#floating {
+  position: fixed;
+  z-index: 1;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 5px;
+  bottom: 15px;
+  right: 20px;
+  cursor: pointer;
+  background-color: rgba(21, 93, 116, 0.6);
+  opacity: 0;
+  transition: all .5s; }
+  #floating i {
+    color: #fff; }
 
 .nav {
-  position: absolute;
+  position: fixed;
+  width: 100%;
   z-index: 2;
-  right: 10px;
-  top: 10px; }
+  transition: all 0.5s;
+  height: 50px;
+  line-height: 50px; }
   .nav ul li {
     display: inline;
     margin-left: 25px; }
     .nav ul li a {
-      color: #000;
+      color: #fff;
       text-decoration: none; }
   .nav ul .active {
     position: relative; }
@@ -22,12 +45,38 @@ body {
       height: 3px;
       bottom: -5px;
       right: 0;
-      background-color: #155D74; }
+      background-color: #155d74; }
+
+.fixed-navbar {
+  background-color: #155d74; }
+  .fixed-navbar ul .active:after {
+    background-color: #fff !important; }
 
 .home-section {
-  background-image: url("../images/bg-masthead.jpg");
-  background-size: cover;
-  background-position: center; }
+  position: relative;
+  background-color: black;
+  height: 100vh;
+  min-height: 25rem;
+  width: 100%;
+  overflow: hidden;
+  padding-bottom: 20px; }
+  .home-section video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%); }
+  .home-section .home-section-content {
+    padding-top: 260px;
+    position: relative; }
+    .home-section .home-section-content h5 {
+      color: #fff; }
   .home-section h5 {
     font-size: 40px;
     text-transform: uppercase; }
@@ -36,25 +85,146 @@ body {
     text-transform: uppercase;
     width: 15%;
     padding: 5px;
-    transition: .5s; }
+    transition: 0.5s; }
   .home-section .btn-hire {
-    background-color: #155D74;
-    border: 2px solid #155D74; }
+    background-color: #155d74;
+    border: 2px solid #155d74; }
     .home-section .btn-hire:hover {
-      color: #155D74;
+      color: #155d74;
       background-color: #fff; }
   .home-section .btn-project {
-    color: #155D74;
+    color: #155d74;
     background-color: #fff;
     border: 2px solid #fff; }
     .home-section .btn-project:hover {
       background-color: transparent;
-      color: #155D74;
-      border: 2px solid #155D74; }
+      color: #fff;
+      border: 2px solid #fff; }
+
+.about-section {
+  margin-top: 50px; }
+  .about-section .header {
+    font-size: 60px;
+    text-align: center;
+    color: #fff; }
+  .about-section .about-img img {
+    width: 70%;
+    border-radius: 5px; }
+  .about-section .about-content {
+    background-color: #fff;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    padding: 20px;
+    top: 60px;
+    position: absolute;
+    left: -180px;
+    border-radius: 10px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-right: 3px solid #155d74; }
+    .about-section .about-content p {
+      line-height: 30px; }
+
+.project-section {
+  margin-top: 90px; }
+  .project-section .card {
+    margin-top: 20px;
+    border: 0; }
+    .project-section .card:focus {
+      outline: 0; }
+    .project-section .card video {
+      width: 100%;
+      height: 250px; }
+      .project-section .card video:focus {
+        outline: 0; }
+
+.contact-section {
+  margin-top: 160px; }
+  .contact-section .contact-us-form {
+    background-color: #fff;
+    margin-top: 20px;
+    padding: 40px;
+    box-shadow: 0 2.9px 14.3px -13px rgba(0, 0, 0, 0.14), 0 23px 114px -13px rgba(0, 0, 0, 0.28); }
+    .contact-section .contact-us-form .form-control {
+      height: calc(1.5em + 0.75rem + 20px); }
+    .contact-section .contact-us-form .form-textarea {
+      height: auto; }
+    .contact-section .contact-us-form .btn-submit {
+      text-align: center; }
+      .contact-section .contact-us-form .btn-submit .btn {
+        border-radius: 0;
+        background-color: #000;
+        width: 15%;
+        padding: 10px;
+        color: #fff; }
+
+footer {
+  margin-top: 90px;
+  background-color: #155d74;
+  line-height: 80px;
+  position: relative; }
+  footer span a i {
+    width: 40px;
+    height: 40px;
+    line-height: 40px !important;
+    color: #000;
+    background-color: #fff;
+    text-align: center;
+    border-radius: 50%;
+    font-size: 20px; }
+  footer p {
+    margin: 0;
+    text-align: center;
+    font-size: 13px;
+    position: absolute;
+    left: 10px;
+    color: #fff;
+    top: 0; }
+    footer p span {
+      text-transform: uppercase; }
 
 @media (max-width: 800px) {
   .home-section .btn {
     width: 75%;
-    margin-top: 10px; } }
+    margin-top: 10px; }
+
+  .about-section .about-content {
+    top: -11px;
+    left: -125px; } }
+@media (max-width: 524px) {
+  .nav {
+    position: absolute;
+    z-index: 2;
+    right: 0px;
+    top: 0px;
+    background-color: #155d74;
+    width: 100% !important;
+    height: 50px;
+    line-height: 50px; }
+    .nav ul li a {
+      color: #fff; }
+    .nav ul .active:after {
+      background-color: #fff; }
+
+  .home-section .home-section-content {
+    padding-top: 200px; }
+
+  .about-section .about-img {
+    text-align: left;
+    height: 180px; }
+    .about-section .about-img img {
+      width: 35%; }
+  .about-section .about-content {
+    background-color: #fff;
+    margin-top: 15px;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    padding: 20px;
+    position: unset;
+    border-radius: 10px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-right: 0;
+    border-bottom: 3px solid #155d74; }
+    .about-section .about-content p {
+      line-height: 30px; } }
 
 /*# sourceMappingURL=style.css.map */

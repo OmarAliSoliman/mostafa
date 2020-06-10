@@ -4,43 +4,188 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
-  <link rel="stylesheet" href="./assets/css/fullpage.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
   <link rel="stylesheet" href="./assets/css/style.css">
   <title>Document</title>
 </head>
-<body>
+<body id="home">
+
+  <!-- floatin -->
+  <div id="floating">
+    <i class="fas fa-chevron-up"></i>
+  </div>
   
   <!-- start nav bar -->
   <div class="nav">
-    <ul class="list-unstyled">
-      <li class="active"><a href="#">Home</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Project</a></li>
-      <li><a href="#">Contact</a></li>
+    <ul class="list-unstyled nav-list">
+      <li class="active"><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#project">Project</a></li>
+      <li><a href="#contact">Contact</a></li>
     </ul>
   </div>
 
-  <div id="fullpage">
-    <div class="section home-section">
-      <div class="container text-center">
-        <div class="home-section-content">
-          <h5>Hello to my portifilio</h5>
-          <button class="btn btn-hire">Hire me</button>
-          <button class="btn btn-project">my project</button>
+  <div class="home-section">
+    <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+      <source src="./assets/videos/header-video.mp4" type="video/mp4">
+    </video>
+    <div class="container text-center">
+      <div class="home-section-content">
+        <h5>Hello to my portifilio</h5>
+        <a href="#contact" class="btn btn-hire">Hire me</a>
+        <a href="#project" class="btn btn-project">my project</a>
+      </div>
+    </div>
+  </div>
+  <!-- end header -->
+
+  <!-- start about -->
+  <div class="about-section" id="about">
+    <div class="container">
+      <h2 class="text-uppercase header">about</h2>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6 col-md-5 col-lg-5">
+          <div class="about-img">
+            <img src="./assets/images/mostafa.jpeg" alt="">
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-7 col-lg-7">
+          <div class="about-content">
+            <p>Hey, <span>I'm Mostafa</span>, I've been a freelance motion graphics and video editing for 3+ years, I worked with many projects for design companies in my country, did projects online for YouTubers and public figure in Instagram and Facebook.
+
+              I specialize in montre and motion effects and logo design, I design for Ahmed abo zid YouTuber intro and redesign his channel which doubled his revenue in the first year and continues to grow each year, I also creat vision store logo which makes the store more professional and get more clients in the first month, and more and more.
+              
+              
+              when you hire me, here's what we would do:
+              
+              1-First, click the invite button to invite me to your job.
+              2-Once everything is accepted, I'll jump on the chat with you.
+              3-we'll go over all the details, colors, functionality, etc
+              
+              so, if that sounds good, just click the "invited" button and we can start.</p>
+          </div>
         </div>
       </div>
     </div>
-    <div class="section">Some section</div>
-    <div class="section">Some section</div>
-    <div class="section">Some section</div>
   </div>
+  <!-- end about -->
+
+
+  <!-- start project -->
+  <div class="about-section project-section" id="project">
+    <div class="container">
+      <h2 class="text-uppercase header">projects</h2>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 col-md-6 col-lg-4">
+          <div class="card">
+            <video playsinline="playsinline" controls="true" muted="muted" loop="loop">
+              <source src="./assets/videos/video1.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-4">
+          <div class="card">
+            <video playsinline="playsinline" controls="true" muted="muted" loop="loop">
+              <source src="./assets/videos/video2.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-4">
+          <div class="card">
+            <video playsinline="playsinline" controls="true" muted="muted" loop="loop">
+              <source src="./assets/videos/video3.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-4">
+          <div class="card">
+            <video playsinline="playsinline" controls="true" muted="muted" loop="loop">
+              <source src="./assets/videos/video1.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-4">
+          <div class="card">
+            <video playsinline="playsinline" controls="true" muted="muted" loop="loop">
+              <source src="./assets/videos/video1.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end project -->
+
+  <!-- start contact  -->
+  <!-- start form -->
+  <div class="about-section contact-section" id="contact">
+    <div class="container">
+      <div class="container">
+        <h2 class="text-uppercase header">Contact</h2>
+      </div>
+      <div class="row">
+        <div class="col-sm-12 col-lg-12">
+          <form action="" class="contact-us-form">
+            <div class="row">
+              <div class="col-sm-12 col-md-6 col-lg-4">
+                <div class="form-group">
+                  <label for="exampleInputText">Name</label>
+                  <input type="text" class="form-control" id="exampleInputText" aria-describedby="emailHelp"
+                    placeholder="ex:omar">
+                </div>
+              </div>
+              <div class="col-sm-12 col-md-6 col-lg-4">
+                <div class="form-group">
+                  <label for="exampleInputText">Phone</label>
+                  <input type="text" class="form-control" id="exampleInputText" aria-describedby="emailHelp"
+                    placeholder="ex:0020xxxxxxx">
+                </div>
+              </div>
+              <div class="col-sm-12 col-md-6 col-lg-4">
+                <div class="form-group">
+                  <label for="exampleInputText">Email</label>
+                  <input type="email" class="form-control" id="exampleInputText" aria-describedby="emailHelp"
+                    placeholder="ex:m.s@site.com">
+                </div>
+              </div>
+              <div class="col-sm-12 col-lg-12">
+                <div class="form-group">
+                  <label for="exampleFormControlTextarea1">Message</label>
+                  <textarea class="form-control form-textarea" id="exampleFormControlTextarea1" rows="10"
+                    placeholder="ex:Text"></textarea>
+                </div>
+              </div>
+            </div>
+            <div class="btn-submit">
+              <button type="submit" class="btn">Send</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end form -->
+  <!-- end contact  -->
+
+  <!-- start ffoter -->
+  <footer>
+    <div class="social text-center">
+      <span><a href="#"><i class="fab fa-facebook-f"></i></a></span>
+      <span><a href="#"><i class="fab fa-twitter"></i></a></span>
+      <span><a href="#"><i class="fab fa-instagram"></i></a></span>
+      <span><a href="#"><i class="fab fa-whatsapp"></i></a></span>
+    </div>
+    <p>all &copy; copy right saved for <span>mostafa mahmoud</span> 2020</p>
+  </footer>
+  <!-- start ffoter -->
 
   <script src="./assets/js/jquery-3.3.1.min.js"></script>
   <script src="./assets/js/popper.min.js"></script>
   <script src="./assets/js/bootstrap.min.js"></script>
-  <script src="./assets/js/easings.min.js"></script>
-  <script src="./assets/js/scrolloverflow.min.js"></script>
-  <script src="./assets/js/fullpage.js"></script>
   <script src="./assets/js/main.js"></script>
 </body>
 </html> 
