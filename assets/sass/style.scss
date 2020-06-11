@@ -150,7 +150,7 @@ html {
     }
   }
   .about-content {
-    background-color: #fff;
+    background-color: #000;
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
     padding: 20px;
     top: 60px;
@@ -163,6 +163,7 @@ html {
     border-right: 3px solid $mainColor;
     p {
       line-height: 30px;
+      color: #fff;
     }
   }
 }
@@ -303,19 +304,20 @@ footer {
       }
     }
     .about-content {
-      background-color: #fff;
-      margin-top: 15px;
-      box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
       padding: 20px;
       position: unset;
-      border-radius: 10px;
-      border-top-right-radius: 0;
-      border-bottom-right-radius: 0;
-      border-right: 0;
       border-bottom: 3px solid $mainColor;
       p {
         line-height: 30px;
       }
     }
   }
+  .contact-section .contact-us-form .btn-submit .btn{
+    width: 25%;
+  }
+  footer{
+    p{
+      position: unset;
+    }
+  } 
 }
