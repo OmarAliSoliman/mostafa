@@ -23,8 +23,8 @@ $(document).ready(function () {
   var typed = new Typed('.type', {
     strings: [ 
       " Mostafa Mahmoud",
-      " an Engineer",
-      " Motion Graphic",
+      " Motion graphics",
+      " video montire",
     ],
     typeSpeed: 100,
     backSpeed: 80,
