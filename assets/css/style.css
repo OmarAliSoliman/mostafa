@@ -115,12 +115,13 @@ canvas {
 .header .header-caption {
   position: absolute;
   padding: 20px;
+  padding-bottom: 0;
   z-index: 1;
   top: 40%;
   width: 50%;
-  height: 190px;
+  height: 140px;
   background-image: linear-gradient(to right, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.3));
-  border-left: 3px solid #155d74;
+  border-left: 3px solid #fff;
   font-size: 30px;
 }
 .header .header-caption .header-caption-h5 {
@@ -136,17 +137,6 @@ canvas {
   text-transform: uppercase;
   color: #155d74;
   font-weight: bold;
-}
-.header .header-caption .btn-download {
-  margin-top: 10px;
-}
-.header .header-caption .btn-download .btn {
-  background-color: #155d74;
-  color: #fff;
-  font-size: 14px;
-}
-.header .header-caption .btn-download .btn i {
-  font-size: 13px;
 }
 
 .section .section-header {
