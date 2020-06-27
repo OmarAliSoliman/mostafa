@@ -30,45 +30,23 @@ $(document).ready(function () {
     backSpeed: 80,
     loop: true
   });
-
-
-  $('.project-slider').slick({
-    dots: true,
-    infinite: false,
-    speed: 300,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    autoplay: true,
-    loop: true,
-    arrows: true,
-    infinite: true,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
-          infinite: true,
-          dots: true
-        }
-      },
-      {
-        breakpoint: 800,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-          dots: true,
-        }
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          dots: true,
-        }
-      }
-    ]
-  });
-
 });
+
+
+let moreProjectBtn = document.querySelector('.btn-more .btn');
+let moreProjectDiv = document.querySelector('.more-project');
+let moreProjectDivStatusOpen = false;
+
+moreProjectBtn.addEventListener('click', (e)=>{
+  if(!moreProjectDivStatusOpen){
+    moreProjectDiv.style.display = "block";
+    moreProjectDiv.style.opacity = "1";
+    moreProjectBtn.innerHTML = `show less <i class="fas fa-chevron-up"></i>`;
+  }else{
+    moreProjectDiv.style.display = "none";
+    moreProjectDiv.style.opacity = "0";
+    moreProjectBtn.innerHTML = `show more <i class="fas fa-chevron-down"></i>`;
+  }
+  moreProjectDivStatusOpen=!moreProjectDivStatusOpen;
+  e.preventDefault();
+})
